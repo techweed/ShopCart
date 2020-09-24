@@ -1,0 +1,57 @@
+<!--Main layout-->
+<main class="mt-5 pt-4" *ngIf="products == null">
+    <h2 class="w3-wide w3-center" style="text-transform: uppercase;">CART EMPTY</h2>
+    <p class="w3-opacity w3-center"><i>Amazing products awaits you!</i></p><br><hr>
+</main>
+  <main class="mt-5 pt-4" *ngIf="products != null">
+      <h2 class="w3-wide w3-center" style="text-transform: uppercase;">CART</h2>
+      <p class="w3-opacity w3-center"><i>Find all you need!</i></p><br><hr>
+      <div class="container dark-grey-text mt-5" *ngFor="let product of products">
+
+        <!--Grid row-->
+        <div class="row wow fadeIn " >
+          <!--Grid column-->
+          <div class="col-md-4 mb-4">
+            <img src="{{product.image}}"  alt="" height="300px">
+          </div>
+          <div class="col-md-4 mb-4" >
+            <!--Content-->
+            <div class="p-4">
+                <p class="lead font-weight-bold">{{product.name}}</p>
+              <p class="lead">
+                <span class="mr-1">
+                  <del>${{product.price}}</del>
+                </span>
+                <span>${{product.price}}</span>
+              </p>
+              <form class="d-flex justify-content-left">
+                  <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">&nbsp;
+                  <button class="btn btn-danger" id="remove" (click)="remove(product.Id)" type="submit">Remove</button>
+                </form>
+                <br><br>
+                <p class="lead font-weight-bold" >Description</p>
+              <p>{{product.description}}</p>
+  
+            </div>
+            <!--Content-->
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+        <hr>
+      </div>
+
+<div class="footer" style="float:right">
+    
+    <div class="pull-right" style="margin: 10px">
+        <a routerLink="/checkout" class="btn btn-success pull-right">Checkout</a>
+        <div class="pull-right" style="margin: 5px">
+            Total price: <b>₹&nbsp;{{tprice}}</b>
+        </div>
+    </div>
+</div>
+
+    </main>
+    <!--Main layout-->
+  
+  

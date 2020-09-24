@@ -1,0 +1,250 @@
+<nav id="navbar" class="navbar sticky-top navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">    
+    <img src="assets/ico.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    My Shop</a>
+  <ul class="nav nav-pills">
+      <li class="nav-item">
+          <a class="nav-link" href="#" *ngIf="loggedIn==true" id="user" >{{Email2}}</a>
+        </li>
+	    <li class="nav-item">
+      <a class="nav-link" routerLink="aboutus">ABOUT</a>
+    </li>
+	    <li class="nav-item">
+      <a class="nav-link" href="#" id='userSignIn' *ngIf="loggedIn==false" data-toggle="modal" data-target="#signinModal">SIGN IN</a>
+      <a class="nav-link" href="#" id='userSignOut' *ngIf="loggedIn==true" data-toggle="modal" data-target="#signoutModal">SIGN OUT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" id='cart' routerLink="cart">CART</a>
+    </li>
+  </ul>
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="redirect()">Search</button> -->
+    </form>
+    <!-- <li class="nav-item dropdown">
+
+      <a class="nav-link" href="#" id="navbarDropdown"
+      role="button" data-toggle="dropdown" aria-haspopup="true"
+      
+      id="name-user" style="color: white;">
+      
+      <input class="form-control ml-sm-2" (input)="MatchedProducts()" list="productsList"
+      style="width: 440px"
+      
+      type="text" placeholder="Search for products or brands" name="searchString" [(ngModel)]="searchString">
+      
+      </a>
+      
+      <div class="dropdown-menu ml-sm-2" style="width: 440px"
+      aria-labelledby="navbarDropdown" *ngIf="searchString != ''">
+      
+      <a class="dropdown-item" *ngFor="let i of searchItems">
+      
+      <a href="products/{{i.cat_name}}"><span
+      class="pl-2">{{i.cat_name}}</span></a>
+      
+      </a>
+      
+      </div>
+      
+      </li> -->
+</nav>
+
+<!--Second Navbar begins here-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCategory" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCategory">
+    <ul class="navbar-nav mr-auto ">
+        <li class="nav-item dropdown active mr-sm-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Electronics
+            </a>
+            
+            <div class="dropdown-menu mr-sm-2" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="products/smartphones" (click)="refresh()">Smartphones</a>
+              <a class="dropdown-item" routerLink="products/mobilea" (click)="refresh()">Mobile Accessories</a>
+              <a class="dropdown-item" routerLink="products/laptops" (click)="refresh()">Laptops</a>
+              <a class="dropdown-item" routerLink="products/homee" (click)="refresh()">Home Entertainment</a>
+              <a class="dropdown-item" routerLink="products/camera" (click)="refresh()">Camera</a>
+              <a class="dropdown-item" routerLink="products/networkc" (click)="refresh()">Network Components</a>
+              <a class="dropdown-item" routerLink="products/gaming" (click)="refresh()">Gaming</a>
+              <a class="dropdown-item" routerLink="products/computera" (click)="refresh()">Computer Accessories</a>             
+            </div>
+          </li>
+    </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown active mr-sm-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Home & Furniture
+            </a>
+            <div class="dropdown-menu mr-sm-2" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="products/furniture" (click)="refresh()">Furniture</a>
+              <a class="dropdown-item" routerLink="products/dining" (click)="refresh()">Kitchen & Dining</a>
+              <a class="dropdown-item" routerLink="products/kitchens" (click)="refresh()">Kitchen Storage</a>
+              <a class="dropdown-item" routerLink="products/tools" (click)="refresh()">Tools & Hardware</a>
+              <a class="dropdown-item" routerLink="products/decor" (click)="refresh()">Home Decor</a>
+              <a class="dropdown-item" routerLink="lighting" (click)="refresh()">Lighting</a>
+            </div>
+          </li>
+    </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown active mr-sm-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Fashion Store
+            </a>
+            <div class="dropdown-menu mr-sm-2" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="products/men" (click)="refresh()">Men's Fashion</a>
+              <a class="dropdown-item" routerLink="products/women" (click)="refresh()">Women's Fashion</a>
+              <a class="dropdown-item" routerLink="products/kid" (click)="refresh()">Kid's Fashion</a>
+              <a class="dropdown-item" routerLink="products/footwears" (click)="refresh()">Footwears</a>
+              <a class="dropdown-item" routerLink="products/jewellery" (click)="refresh()">Jewellery</a>
+              <a class="dropdown-item" routerLink="products/sunglasses" (click)="refresh()">Sunglasses</a>
+            </div>
+          </li>
+    </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown active mr-sm-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              TV & Appliances
+            </a>
+            <div class="dropdown-menu mr-sm-2" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="products/tel" (click)="refresh()">Television</a>
+              <a class="dropdown-item" routerLink="products/wash" (click)="refresh()">Washing Machine</a>
+              <a class="dropdown-item" routerLink="products/refrig" (click)="refresh()">Refrigerators</a>
+              <a class="dropdown-item" routerLink="oven" (click)="refresh()">Microwave Oven</a>
+              <a class="dropdown-item" routerLink="purifier" (click)="refresh()">Water Purifier</a>
+              <a class="dropdown-item" routerLink="products/ac" (click)="refresh()">Air Conditioner</a>
+              <a class="dropdown-item" routerLink="products/audio" (click)="refresh()">Audio & Video</a>
+              <a class="dropdown-item" routerLink="products/helectricals" (click)="refresh()">Home Electricals</a>
+            </div>
+          </li>
+    </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown active mr-sm-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              More
+            </a>
+            <div class="dropdown-menu mr-sm-2" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="products/sports" (click)="refresh()">Sports & Nutrition</a>
+              <a class="dropdown-item" routerLink="products/books" (click)="refresh()">Books</a>
+              <a class="dropdown-item" routerLink="products/music" (click)="refresh()">Musical Instruments</a>
+              <a class="dropdown-item" routerLink="products/movies" (click)="refresh()">Movies & Music</a>
+              <a class="dropdown-item" routerLink="products/stationery" (click)="refresh()">Stationery</a>
+              <a class="dropdown-item" routerLink="products/automotive" (click)="refresh()">Automotive</a>
+            </div>
+          </li>
+    </ul>
+    </div>
+</nav>
+<!--Second Navbar ends here-->
+
+<!-- Modal Signout-->
+<div class="modal fade" id="signoutModal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalCenterTitle">Log Out</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure to log out ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="logoutClose" style="padding-right:25px;padding-left:25px">No</button>
+          <button type="button" class="btn btn-primary" (click)="LogoutFunction()" style="padding-right:25px;padding-left:25px">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal Sign In-->
+  <div class="modal fade" id="signinModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <h4 class="modal-title">Login</h4>
+          <img src="assets/user.png" alt="avatar" height="150">
+
+		        <button type="button" class="close" id="close" data-dismiss="modal">&times;</button>
+          </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form" #SigninForm="ngForm" (ngSubmit)="Signin(SigninForm)" >
+            <div class="form-group">
+              <label for="email2"> Email</label>
+              <input name="Email2" [(ngModel)]="Email2" type="text" class="form-control" id="email2" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psd1">Password</label>
+              <input name="Password2" [(ngModel)]="Password2" type="text" class="form-control" id="psd1" placeholder="Enter password" type="password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block" > Login</button>
+			      <div class="modal-footer">
+              <h6>Not a member? <a href="" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Sign Up</a></h6>
+              <h6>Forgot <a href="">Password?</a></h6>
+					  </div>
+          </form>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Modal Sign Up-->
+  <div class="modal fade" id="signupModal" role="dialog" >
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">SignUp</h4>
+          <img src="assets/userAdd.png" alt="avatar" height="150">
+		      <button type="button" class="close" id="close2" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form #RegisterForm="ngForm" (ngSubmit)="Register(RegisterForm)" name="signupForm" >
+            <div class="form-group">
+              <label for="username1"> Full Name</label>
+              <input type="text" name="Name" [(ngModel)]="Name" class="form-control" id="username1" placeholder="Enter full name">
+            </div>
+			      <div class="form-group">
+              <label for="Email"> Email</label>
+              <input type="text" name="Email" [(ngModel)]="Email" class="form-control" id="Email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psd11">Password</label>
+              <input name="Password" [(ngModel)]="Password" class="form-control" id="psd11" placeholder="Enter password" type="password">
+			        <h6 style="float:right"><em>8-16 Characters</em></h6>
+            </div>
+			      <div class="form-group">
+              <label for="psd21">Confirm Password</label>
+              <input class="form-control" id="psd21" placeholder="Confirm password" type="password">
+            </div>
+              <button type="submit" class="btn btn-success btn-block" (click)="fun()">Sign Up</button>
+			      <div class="modal-footer" style="float:left;">
+					    <input type="checkbox" id="agree">
+					    <h6>I Accept to the terms of service</h6>
+					</div>
+          </form>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+<router-outlet></router-outlet>
+

@@ -1,0 +1,152 @@
+[
+    {
+      "Id": 1,
+      "cat_name": "smartphones",
+      "name": "Lenovo Vibe C",
+      "price": 5000,
+      "image": "./assets/products/sp/sp1.png",
+      "description":"iPhone 6 isn’t simply bigger - it’s better in every way."
+    },
+    {
+        "Id": 2,
+        "cat_name": "smartphones",
+        "name": "Micromax Canvas 5",
+        "price": 4500,
+        "image": "./assets/products/sp/sp2.png",
+        "description":"iPhone 6 isn’t simply bigger - it’s better in every way."
+      },
+      {
+        "Id": 3,
+        "cat_name": "smartphones",
+        "name": "Xiaomi Mi 3",
+        "price": 6000,
+        "image": "./assets/products/sp/sp3.png",
+        "description":"iPhone 6 isn’t simply bigger - it’s better in every way."
+      },
+      {
+        "Id": 4,
+        "cat_name": "smartphones",
+        "name": "Redmi 4A",
+        "price": 7000,
+        "image": "./assets/products/sp/sp4.png",
+        "description":"iPhone 6 isn’t simply bigger - it’s better in every way."
+      },
+      {
+        "Id": 5,
+        "cat_name": "smartphones",
+        "name": "Moto E4",
+        "price": 7500,
+        "image": "./assets/products/sp/sp5.png",
+        "description":"iPhone 6 isn’t simply bigger - it’s better in every way."
+      },
+      {
+        "Id":6,
+        "cat_name": "laptops",
+        "name": "Xiaomi Redmi 5A",
+        "price": 8000,
+        "image": "./assets/products/lt/lt1.png"
+      },
+      {
+        "Id":7,
+        "cat_name": "laptops",
+        "name": "HP ProBook",
+        "price": 50000,
+        "image": "./assets/products/lt/lt2.png"
+      },
+      {
+        "Id": 8,
+        "cat_name": "laptops",
+        "name": "Aspire R14",
+        "price": 45000,
+        "image": "./assets/products/lt/lt3.png"
+      },
+      {
+        "Id": 9,
+        "cat_name": "laptops",
+        "name": "Nikon",
+        "price": 5000,
+        "image": "./assets/products/lt/lt4.png"
+      },
+      {
+        "Id": 10,
+        "cat_name": "laptops",
+        "name": "KODAK PIXPRO",
+        "price": 5500,
+        "image": "./assets/products/lt/lt5.png"
+      },
+      {
+        "Id": 11,
+        "cat_name": "men",
+        "name": "Allen Solly",
+        "price": 6000,
+        "image": "./assets/products/fm/fm1.jpg"
+      },
+      {
+        "Id": 12,
+        "cat_name": "men",
+        "name": "Allen Solly",
+        "price": 1000,
+        "image": "./assets/products/fm/fm2.jpg"
+      },
+      {
+        "Id": 13,
+        "cat_name": "men",
+        "name": "Allen Solly",
+        "price": 6000,
+        "image": "./assets/products/fm/fm3.jpg"
+      },
+      {
+        "Id": 14,
+        "cat_name": "men",
+        "name": "Allen Solly",
+        "price": 3000,
+        "image": "./assets/products/fm/fm4.jpg"
+      },
+      {
+        "Id": 15,
+        "cat_name": "men",
+        "name": "Allen Solly",
+        "price": 7000,
+        "image": "./assets/products/fm/fm5.jpg"
+      },
+      {
+        "Id":16,
+        "cat_name": "women",
+        "name": "Queen of India",
+        "price": 46000,
+        "image":"./assets/products/fw/fw1.jpg",
+        "description":"Queen of India affeta Silk Embroidered Semi-Stitched Anarkali Gown | womens party wear"
+      },
+      {
+        "Id": 17,
+        "cat_name": "women",
+        "name": "Queen of India",
+        "price": 26000,
+        "image": "./assets/products/fw/fw2.jpg",
+        "description":"Queen of India affeta Silk Embroidered Semi-Stitched Anarkali Gown | womens party wear"
+      },
+      {
+        "Id": 18,
+        "cat_name": "women",
+        "name": "Queen of India",
+        "price": 16000,
+        "image": "./assets/products/fw/fw3.jpg",
+        "description":"Queen of India affeta Silk Embroidered Semi-Stitched Anarkali Gown | womens party wear"
+      },
+      {
+        "Id": 19,
+        "cat_name": "women",
+        "name": "Queen of India",
+        "price": 61000,
+        "image": "./assets/products/fw/fw4.jpg",
+        "description":"Queen of India affeta Silk Embroidered Semi-Stitched Anarkali Gown | womens party wear"
+      },
+      {
+        "Id": 20,
+        "cat_name": "women",
+        "name": "Queen of India",
+        "price": 63500,
+        "image": "./assets/products/fw/fw5.jpg",
+        "description":"Queen of India affeta Silk Embroidered Semi-Stitched Anarkali Gown | womens party wear"
+      }
+]
